@@ -9,19 +9,19 @@ public final class NoteKeeperProviderContract {
     private NoteKeeperProviderContract(){}
 
     public static final String AUTHORITY = "com.jafriam.notekeeper.provider";
-    public static final Uri AUTHORITY_URI = Uri.parse("content://" + AUTHORITY);
+    private static final Uri AUTHORITY_URI = Uri.parse("content://" + AUTHORITY);
 
     public interface CoursesIdColumns {
-        public static final String COLUMN_COURSE_ID = "course_id";
+        String COLUMN_COURSE_ID = "course_id";
     }
 
     public interface CoursesColumns {
-        public static final String COLUMN_COURSE_TITLE = "course_title";
+        String COLUMN_COURSE_TITLE = "course_title";
     }
 
     public interface NoteColumns {
-        public static final String COLUMN_NOTE_TITLE = "note_title";
-        public static final String COLUMN_NOTE_TEXT = "note_text";
+        String COLUMN_NOTE_TITLE = "note_title";
+        String COLUMN_NOTE_TEXT = "note_text";
     }
 
     public static final class Courses implements CoursesColumns, BaseColumns, CoursesIdColumns {
