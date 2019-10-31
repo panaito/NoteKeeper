@@ -26,7 +26,7 @@ public final class NoteInfo implements Parcelable{
         mId = id;
     }
 
-    protected NoteInfo(Parcel in) {
+    private NoteInfo(Parcel in) {
         mCourse = in.readParcelable(CourseInfo.class.getClassLoader());
         mTitle = in.readString();
         mText = in.readString();
